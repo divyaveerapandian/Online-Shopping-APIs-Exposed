@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Shopping Site</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script type="text/javascript"
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body>
+	<div ng-app="myApp" class="container">
+		<h1>Online Shopping Site</h1>
+		<div class="bs-example">
+			<ul class="nav nav-pills">
+				<li><a href="index.html">Home</a></li>
+				<li  class="active"><a href="Product.html">Product</a></li>
+				<li><a href="#">Messages</a></li>
+			</ul>
+		</div>
+		<div ng-controller="myPrd">
+			<table>
+				<tr ng-repeat="result in results" class="info">
+					<td>{{result.productName}}</td>
+					<td>{{result.category.categoryName}}</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+</body>
+</html>
